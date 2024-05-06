@@ -1,4 +1,23 @@
-function getHumanChoice() {
+const rock = document.querySelector("#rock");
+rock.addEventListener("click", () => {
+    const computerChoice = getComputerChoice();
+    playRound("rock", computerChoice);
+});
+
+const paper = document.querySelector("#paper");
+paper.addEventListener("click", () => {
+    const computerChoice = getComputerChoice();
+    playRound("paper", computerChoice);
+});
+
+const scissors = document.querySelector("#scissors");
+scissors.addEventListener("click", () => {
+    const computerChoice = getComputerChoice();
+    playRound("scissors", computerChoice);
+});
+
+
+function getHumanChoice() {   
     let humanChoice = window.prompt("Rock, Paper, or Scissors?");
     if (humanChoice.toLowerCase() == "rock") {
         return "rock";
@@ -86,6 +105,6 @@ function playGame() {
     }
 }
 
-playGame();
+// playGame();
 
 
